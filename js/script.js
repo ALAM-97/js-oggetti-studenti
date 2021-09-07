@@ -59,4 +59,4 @@ allStudents.push({
     "age": userAge
 });
 
-console.log(allStudents);Alessandro
+console.log(allStudents);
