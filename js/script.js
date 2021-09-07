@@ -43,20 +43,56 @@ var allStudents =
 // 4.
 
 for ( var i = 0; i < allStudents.length; i++) {
-    console.log(allStudents[i].name);
-    console.log(allStudents[i].surname)
+    // console.log(allStudents[i].name);
+    // console.log(allStudents[i].surname)
+    document.getElementById("list").innerHTML += `<li>${allStudents[i].name}</li>`
+    document.getElementById("list").innerHTML += `<li>${allStudents[i].surname}</li>`
+    document.getElementById("list").innerHTML += `<hr>`
 }
 
 // 5.
+var btn = document.getElementById("btn");
+var regBtn = document.getElementById("btn-reg");
 
-var userName = prompt("inserisci il tuo nome");
-var userSurname = prompt("inserisci il tuo cognome");
-var userAge = parseInt(prompt("inserisci la tua età"));
+btn.addEventListener("click",
+    function() {
+        document.getElementById("inputs").style.display = "block";
+        document.getElementById("btn-reg").style.display = "block";
+    }
+);
 
-allStudents.push({
-    "name": userName,
-    "surname": userSurname,
-    "age": userAge
-});
+regBtn.addEventListener("click",
+    function() {
+        var userName = document.getElementById("user-name").value;
+        var userSurname = document.getElementById("user-surname").value;
+        var userAge = document.getElementById("user-age").value;
+
+        allStudents.push({
+            "name": userName,
+            "surname": userSurname,
+            "age": userAge
+        })
+        document.getElementById("list").innerHTML += `<li>${userName}</li>`
+        document.getElementById("list").innerHTML += `<li>${userSurname}</li>`
+        document.getElementById("list").innerHTML += `<hr>`
+        document.getElementById("esito").style.display = "block";
+        document.getElementById("inputs").style.display = "none";
+        document.getElementById("btn-reg").style.display = "none";
+    }
+);
+
+
+
+
+// allStudents.push({
+//     "name": userName,
+//     "surname": userSurname,
+//     "age": userAge
+// })
+
+// var userName = prompt("inserisci il tuo nome");
+// var userSurname = prompt("inserisci il tuo cognome");
+// var userAge = parseInt(prompt("inserisci la tua età"));
+
 
 console.log(allStudents);

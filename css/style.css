@@ -3,3 +3,47 @@
     padding: 0;
     box-sizing: border-box;
 }
+
+/* BODY */
+body {
+    background-color: rgb(34, 34, 158);
+    color: #fff;
+}
+h1 {
+    text-align: center;
+    margin: 30px auto;
+}
+ul {
+    margin-left: 40px;
+    margin-top: 10px;
+    list-style: none;
+}
+.list_intro {
+    margin-left: 25px;
+}
+#btn {
+    text-align: center;
+    padding: 5px 20px;
+    display: block;
+    margin-bottom: 30px;
+}
+#inputs {
+    text-align: center;
+    display: none;
+}
+#btn-reg {
+    text-align: center;
+    margin-top: 50px;
+    display: none;
+}
+hr {
+    width: 150px;
+}
+#esito {
+    background-color: green;
+    width: 300px;
+    margin: 20px auto;
+    padding: 10px 20px;
+    text-align: center;
+    display: none;
+}
