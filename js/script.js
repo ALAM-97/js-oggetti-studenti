@@ -48,3 +48,15 @@ for ( var i = 0; i < allStudents.length; i++) {
 }
 
 // 5.
+
+var userName = prompt("inserisci il tuo nome");
+var userSurname = prompt("inserisci il tuo cognome");
+var userAge = parseInt(prompt("inserisci la tua età"));
+
+allStudents.push({
+    "name": userName,
+    "surname": userSurname,
+    "age": userAge
+});
+
+console.log(allStudents);Alessandro
