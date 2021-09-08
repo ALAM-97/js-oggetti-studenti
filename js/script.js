@@ -41,12 +41,8 @@ var allStudents =
 ];
 
 // 4.
-
 for ( var i = 0; i < allStudents.length; i++) {
-    // console.log(allStudents[i].name);
-    // console.log(allStudents[i].surname)
-    document.getElementById("list").innerHTML += `<li>${allStudents[i].name}</li>`
-    document.getElementById("list").innerHTML += `<li>${allStudents[i].surname}</li>`
+    document.getElementById("list").innerHTML += `<li>${allStudents[i].name} ${allStudents[i].surname}</li>`
     document.getElementById("list").innerHTML += `<hr>`
 }
 
@@ -58,6 +54,7 @@ btn.addEventListener("click",
     function() {
         document.getElementById("inputs").style.display = "block";
         document.getElementById("btn-reg").style.display = "block";
+        document.getElementById("esito").style.display = "none";
     }
 );
 
@@ -72,8 +69,7 @@ regBtn.addEventListener("click",
             "surname": userSurname,
             "age": userAge
         })
-        document.getElementById("list").innerHTML += `<li>${userName}</li>`
-        document.getElementById("list").innerHTML += `<li>${userSurname}</li>`
+        document.getElementById("list").innerHTML += `<li>${userName} ${userSurname}</li>`
         document.getElementById("list").innerHTML += `<hr>`
         document.getElementById("esito").style.display = "block";
         document.getElementById("inputs").style.display = "none";
