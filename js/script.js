@@ -62,7 +62,7 @@ regBtn.addEventListener("click",
     function() {
         var userName = document.getElementById("user-name").value;
         var userSurname = document.getElementById("user-surname").value;
-        var userAge = document.getElementById("user-age").value;
+        var userAge = parseInt(document.getElementById("user-age").value);
 
         allStudents.push({
             "name": userName,
